@@ -18,8 +18,8 @@ Please note that all routes in this API should be called with the /api prefix be
 
   | METHOD| URL| What does it do
 | ----- | ---- |
-| POST | auth/signup | Create a new accoun |
-| POST | auth/login | Autehenticates a use|
+| POST | auth/signup | Create a new account |
+| POST | auth/login | Authenticates a use|
 
 
 **ENDPOINTS**
@@ -29,6 +29,6 @@ Please note that all routes in this API should be called with the /api prefix be
 | GET | /home | Main page|
 | GET | /yoga | Yoga general information, benefits and types|
 | GET | /centers | List of centers|
-| GET | /centers/:id | Information of a center|
+| GET | /center/:id | Information of a center|
 
 
