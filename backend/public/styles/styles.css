@@ -1,0 +1,77 @@
+h1 {
+    color: blue
+}
+
+.img-fondo {
+    background-image: url("../img/carruselYoga2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+
+.bloque {
+    display: inline-block;
+}
+
+.form {
+    margin: auto;
+}
+
+.styleBoxs {
+    background-color: #E9EBEF;
+    opacity: 0.6;
+    width: 200px;
+    margin-left: 3.5%;
+    padding: 10px 10px;
+    border-radius: 50%;
+
+}
+
+#listas {
+    
+     border: 2px white;
+     float: right;  
+     margin-right: 50%;
+     margin-top: -10%;
+}
+
+.songColor {
+    color: white;
+}
+
+.play {
+    margin: 5%;
+    background-color: #E9EBEF;
+    opacity: 0.6;
+    border-radius: 50%;
+    
+}
+
+ul, p {
+  color: blue;
+   list-style: none;
+   font-weight: bold;
+
+}
+
+p {text-align: center;}
+
+
+
