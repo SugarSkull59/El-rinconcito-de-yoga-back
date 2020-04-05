@@ -1,11 +1,11 @@
-Esta APi tiene dos finalidades: 
+Esta web tiene dos finalidades: 
   1_ La persona que quiere adentrarse en el mundo del yoga y no conoce centros. Se le facilita información general de lo qué es el yoga, beneficios y tipos de yoga. 
-  2_ La persona que practica yoga puede dejar su opinión sobre centro y conocer ubicación y demás información de los mismo.
+  2_ La persona que practica yoga puede dejar su opinión sobre centro y conocer ubicación y demás información de los mismos.
 
 
-  El acceso a la página es abierto para información genera pero para localización de centros y demás información tienes que estár registrado.
+  El acceso a la página es abierto para información general pero para localización de centros y demás información tienes que estár registrado.
 
-  Nuestra api tendrá una parte de backEnd y una de front que se realizará con Vue.js
+  Nuestro proyecto tendrá una parte de backEnd y una de front que se realizará con Vue.js
 
 *********************************************
 
