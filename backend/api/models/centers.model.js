@@ -1,0 +1,67 @@
+const mongoose = require('mongoose')
+
+const centerSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  direction: {
+    type: String,
+    required: false
+  },
+  province: {
+    type: String,
+    required: true
+  },
+  schedule: {
+    type: String,
+    required: false
+  },
+  email: {
+    type: String,
+    required: false
+  },
+  phone: {
+    type: String,
+    required: false
+  },
+  social_fb: {
+    type: String,
+    required: false
+  },
+  social_insta: {
+    type: String,
+    required: false
+  },
+  social_web: {
+    type: String,
+    required: false
+  },
+  description: {
+    type: String,
+    required: true
+  },
+  opinion: [OpinionSchema],
+  teachers: {
+    type: [String],
+    required: false
+  },
+  type_of_yoga: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: yogaTypeSchema
+  }],
+  price_range_min: {
+    type: Number,
+    required: false
+  },
+  price_range_max: {
+    type: Number,
+    required: false
+  },
+  google_map_embed_iframe: String,
+  geo: {
+    type: [Number],
+    index: '2dsphere',
+    required: false
+  }
+})
