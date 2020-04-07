@@ -12,15 +12,14 @@ module.exports = {
   deleteFavourite
 }
 
-
-function getUser(req, res) {
+function getUser (req, res) {
   UserModel
     .findById((req.params.id))
     .then(response => res.json(response))
     .catch((err) => handleError(err, res))
 }
 
-function updateUser(req, res) {
+function updateUser (req, res) {
   UserModel
     .findByIdAndUpdate(req.params.id, req.body, {
       new: true,
@@ -30,7 +29,7 @@ function updateUser(req, res) {
     .catch((err) => handleError(err, res))
 }
 
-function deleteUser(req, res) {
+function deleteUser (req, res) {
   UserModel
     .remove({
       _id: req.params.id
@@ -39,26 +38,25 @@ function deleteUser(req, res) {
     .catch(err => handleError(err, res))
 }
 
-
-function getFavourites(req, res) {
+function getFavourites (req, res) {
   UserModel
-    .find("favourite_centers")
+    .find('favourite_centers')
     .then(response => res.json(response))
     .catch((err) => handleError(err, res))
 }
 
-function addFavourites(req, res) {
+function addFavourites (req, res) {
   const centerId = req.body.newCenter
   UserModel
-    .find("favourite_centers")
+    .find('favourite_centers')
     .then(listFavourite => listFavourite.push(centerId))
   listFavourite.save()
     .catch((err) => handleError(err, res))
 }
 
-function deleteFavourite(req, res) {
+function deleteFavourite (req, res) {
   UserModel
-    .find("favourite_centers")
+    .find('favourite_centers')
     .remove({
       _id: req.params.id
     })
