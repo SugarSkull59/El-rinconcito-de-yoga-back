@@ -7,9 +7,9 @@ const {
   addOpinion
 } = require('../controllers/center.controller')
 
-router.get('/centers', getAllCenters)
-router.get('/centers/:centerId', getCenter)
-router.get('/centers/:centerId/opinions', getAllOpinions)
-router.post('/centers/:centerId/opinions', addOpinion)
+router.get('/', getAllCenters)
+router.get('/:centerId', getCenter)
+router.get('/:centerId/opinions', getAllOpinions)
+router.post('/:centerId/opinions', addOpinion)
 
 module.exports = router

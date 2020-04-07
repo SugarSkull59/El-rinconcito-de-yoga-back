@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const opinionSchema = require('./opinion.model')
+/* const opinionSchema = require('./opinion.model')  */
 
 const centerSchema = new mongoose.Schema({
   name: {
@@ -18,6 +18,7 @@ const centerSchema = new mongoose.Schema({
     type: String,
     required: false
   },
+  /*  opinion: [opinionSchema], */
   email: {
     type: String,
     required: false
@@ -42,7 +43,6 @@ const centerSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  opinion: [opinionSchema],
   teachers: {
     type: [String],
     required: false
@@ -66,5 +66,5 @@ const centerSchema = new mongoose.Schema({
     required: false
   }
 })
-const centerModel = mongoose.model('user', centerSchema)
+const centerModel = mongoose.model('center', centerSchema)
 module.exports = centerModel

@@ -37,6 +37,7 @@ function addOpinion (req, res) {
     .findById((req.params.centerId))
     .then(center => {
       center.opinion.push(opinionId)
-      center.save()})
+      center.save()
+    })
     .catch((err) => handleError(err, res))
 }

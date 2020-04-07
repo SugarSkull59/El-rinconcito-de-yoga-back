@@ -12,5 +12,5 @@ const opinionSchema = new mongoose.Schema({
     max: 5
   }
 })
-const opinionModel = mongoose.model('user', opinionSchema)
+const opinionModel = mongoose.model('opinion', opinionSchema)
 module.exports = opinionModel

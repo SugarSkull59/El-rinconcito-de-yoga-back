@@ -9,11 +9,11 @@ const {
   deleteFavourite
 } = require('../controllers/users.controller')
 
-router.get('/users/:userId', getUser)
-router.put('/users/:userId', updateUser)
-router.delete('/users/:userId', deleteUser)
-router.get('users/:userId/favourite', getFavourites)
-router.post('/users/:userId/favourites', addFavourites)
-router.delete('/users/:userId/favourites/:centerId', deleteFavourite)
+router.get('/:userId', getUser)
+router.put('/:userId', updateUser)
+router.delete('/:userId', deleteUser)
+router.get('/:userId/favourite', getFavourites)
+router.post('/:userId/favourites', addFavourites)
+router.delete('/:userId/favourites/:centerId', deleteFavourite)
 
 module.exports = router

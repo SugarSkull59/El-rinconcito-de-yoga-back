@@ -49,7 +49,8 @@ function addFavourites (req, res) {
     .findById(req.params.userId)
     .then(user => {
       user.favourite_centers.push(centerId)
-      user.save()})
+      user.save()
+    })
     .catch((err) => handleError(err, res))
 }
 
