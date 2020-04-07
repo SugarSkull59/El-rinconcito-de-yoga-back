@@ -19,24 +19,24 @@ function getAllCenters (req, res) {
 
 function getCenter (req, res) {
   CenterModel
-    .findById((req.params.id))
+    .findById((req.params.centerId))
     .then(response => res.json(response))
     .catch((err) => handleError(err, res))
 }
 
 function getAllOpinions (req, res) {
   CenterModel
-    .findById((req.params.id))
-    .find('opinion')
-    .then(response => res.json(response))
+    .findById((req.params.centerId))
+    .then(response => res.json(response.opinion))
     .catch((err) => handleError(err, res))
 }
 
 function addOpinion (req, res) {
   const opinionId = req.body.newOpinion
   CenterModel
-    .find('opinion')
-    .then(listOpinions => listOpinions.push(opinionId))
-  listOpinions.save()
+    .findById((req.params.centerId))
+    .then(center => {
+      center.opinion.push(opinionId)
+      center.save()})
     .catch((err) => handleError(err, res))
 }
