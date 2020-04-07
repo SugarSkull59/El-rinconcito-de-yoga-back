@@ -1,10 +1,9 @@
 const mongoose = require('mongoose')
 
-
 const opinionSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: userSchema
+    ref: 'user'
   },
   text: String,
   rate: {
@@ -13,3 +12,5 @@ const opinionSchema = new mongoose.Schema({
     max: 5
   }
 })
+const opinionModel = mongoose.model('user', opinionSchema)
+module.exports = opinionModel

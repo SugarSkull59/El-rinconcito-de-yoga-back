@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const opinionSchema = require('./opinion.model')
 
 const centerSchema = new mongoose.Schema({
   name: {
@@ -41,14 +42,14 @@ const centerSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  opinion: [OpinionSchema],
+  opinion: [opinionSchema],
   teachers: {
     type: [String],
     required: false
   },
   type_of_yoga: [{
     type: mongoose.Schema.Types.ObjectId,
-    ref: yogaTypeSchema
+    ref: 'yogaType'
   }],
   price_range_min: {
     type: Number,
@@ -65,3 +66,5 @@ const centerSchema = new mongoose.Schema({
     required: false
   }
 })
+const centerModel = mongoose.model('user', centerSchema)
+module.exports = centerModel

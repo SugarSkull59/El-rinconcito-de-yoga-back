@@ -7,6 +7,7 @@ const cors = require('cors')
 const mongoose = require('mongoose')
 const morgan = require('morgan')
 const path = require('path')
+const routes = require('./api/routes')
 
 // MONGOOSE
 mongoose.connect(process.env.MONGO_URL,
@@ -26,7 +27,7 @@ const app = express()
   .use(morgan('combined'))
   .use(express.json())
   .use(express.static(path.join(__dirname, 'public')))
-  .use('/api', require('./api/routes'))
+  .use('/api', routes)
 
 // Init server
 const PORT = process.env.PORT || 2222

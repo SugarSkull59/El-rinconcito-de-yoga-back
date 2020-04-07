@@ -34,7 +34,7 @@ const mongoose = require('mongoose')
 
    favourite_centers: [{
      type: mongoose.Schema.Types.ObjectId,
-     ref: centerSchema
+     ref: 'center'
    }],
 
    createdAt: {

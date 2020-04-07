@@ -7,3 +7,5 @@ const yogaTypeSchema = new mongoose.Schema({
     unique: true
   }
 })
+const yogaTypeModel = mongoose.model('user', yogaTypeSchema)
+module.exports = yogaTypeModel
