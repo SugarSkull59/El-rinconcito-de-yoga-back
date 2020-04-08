@@ -12,7 +12,7 @@ const {
 router.get('/:userId', getUser)
 router.put('/:userId', updateUser)
 router.delete('/:userId', deleteUser)
-router.get('/:userId/favourite', getFavourites)
+router.get('/:userId/favourites', getFavourites)
 router.post('/:userId/favourites', addFavourites)
 router.delete('/:userId/favourites/:centerId', deleteFavourite)
 

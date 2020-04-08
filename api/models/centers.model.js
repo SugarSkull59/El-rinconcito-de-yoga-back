@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-/* const opinionSchema = require('./opinion.model')  */
+const opinionSchema = require('./opinion.model')
 
 const centerSchema = new mongoose.Schema({
   name: {
@@ -18,7 +18,7 @@ const centerSchema = new mongoose.Schema({
     type: String,
     required: false
   },
-  /*  opinion: [opinionSchema], */
+  opinion: [opinionSchema],
   email: {
     type: String,
     required: false

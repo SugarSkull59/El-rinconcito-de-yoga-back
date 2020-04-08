@@ -9,7 +9,7 @@ const {
 } = require('../utils') // Authenticated Route
 
 router.use('/auth', authRouter)
-router.use('/users', usersRouter)
+router.use('/users', authUser, usersRouter)
 router.use('/centers', centersRouter)
 
 router.get('/whoami', authUser, (req, res) => {
